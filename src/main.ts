@@ -14,9 +14,10 @@ async function bootstrap() {
   //Swagger setup
   const config = new DocumentBuilder()
     .setTitle('DT Money API')
-    .setDescription('API para gerenciamento de transações financeiras')
+    .setDescription('API para gerenciamento de transações financeiras e autenticação de usuários')
     .setVersion('1.0')
     .addTag('transactions', 'Endpoints relacionados a transações financeiras')
+    .addTag('users', 'Endpoints relacionados a gerenciamento de usuários')
     .build();
   
   const document = SwaggerModule.createDocument(app, config);
